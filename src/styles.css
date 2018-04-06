@@ -1,214 +1,242 @@
-@import "~bootstrap/dist/css/bootstrap.css";
-@import "~font-awesome/css/font-awesome.css";
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~font-awesome/css/font-awesome.css';
 html {
-    position: relative;
-    height: 100%;
+  position: relative;
+  height: 100%;
 }
 body {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 50px;
-    background: #eee;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 50px;
+  background: #eee;
 }
 .main-content {
-    margin: 90px 0 30px 0;
+  margin: 90px 0 30px 0;
 }
 .h1 {
-    color: #007bc2;
+  color: #007bc2;
 }
-.h1, .h2, .h3 {
-    margin: 10px 0 !important;
+.h1,
+.h2,
+.h3 {
+  margin: 10px 0 !important;
 }
-.h3, .h3 a, a.h3, a .h3 {
-    color: #007bc2;
+.h3,
+.h3 a,
+a.h3,
+a .h3 {
+  color: #007bc2;
 }
 input[type='checkbox'] {
-    height: 18px;
+  height: 18px;
 }
 
-.fa, a .fa, .glyphicon a, a .glyphicon {
-    color: #007bc2;
-    font-size: 1.1em;
+.fa,
+a .fa,
+.glyphicon a,
+a .glyphicon {
+  color: #007bc2;
+  font-size: 1.1em;
 }
-.btn .fa, .btn .glyphicon, .alert .fa, .alert .glyphicon {
-    font-size: 1.5em;
-    margin-right: .5em;
-    color: #333;
+.btn .fa,
+.btn .glyphicon,
+.alert .fa,
+.alert .glyphicon {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  color: #333;
 }
-.h1 .fa, .h1 .glyphicon, .h2 .fa, h2 .glyphicon, .h3 .fa, .h3 .glyphicon {
-    font-size: 1em;
-    margin-right: .5em;
-    color: #999;
+.h1 .fa,
+.h1 .glyphicon,
+.h2 .fa,
+h2 .glyphicon,
+.h3 .fa,
+.h3 .glyphicon {
+  font-size: 1em;
+  margin-right: 0.5em;
+  color: #999;
 }
-.btn-primary .fa, .btn-primary .glyphicon, .ui-dialog-buttonpane .fa, .ui-dialog-buttonpane .glyphicon {
-    color: #fff !important;
+.btn-primary .fa,
+.btn-primary .glyphicon,
+.ui-dialog-buttonpane .fa,
+.ui-dialog-buttonpane .glyphicon {
+  color: #fff !important;
 }
-.btn .fa:hover, .btn .glyphicon:hover, .alert .fa:hover, .alert .glyphicon:hover {
-    cursor: pointer;
-    color: #0275d8;
+.btn .fa:hover,
+.btn .glyphicon:hover,
+.alert .fa:hover,
+.alert .glyphicon:hover {
+  cursor: pointer;
+  color: #0275d8;
 }
-button.btn, input[type='button'].btn {
-    font-family: Helvetica, Tahoma, Arial, sans-serif;
-    font-weight: 600;
+button.btn,
+input[type='button'].btn {
+  font-family: Helvetica, Tahoma, Arial, sans-serif;
+  font-weight: 600;
 }
-button.btn-default, input[type='button'].btn-default {
-    color: #007bc2;
-    background: linear-gradient(#fff, #ececec)
+button.btn-default,
+input[type='button'].btn-default {
+  color: #007bc2;
+  background: linear-gradient(#fff, #ececec);
 }
 hr {
-    border-top: 1px solid #f6992e;
+  border-top: 1px solid #f6992e;
 }
 
 .img_container {
-    height: 387px;
-    position: relative;
-    background-color: #f5f5f5;
+  height: 387px;
+  position: relative;
+  background-color: #f5f5f5;
 }
 
 .cursor-pointer {
-    cursor:pointer
+  cursor: pointer;
 }
 
 .img_container img {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: 100%;
-    max-width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .image-list .image-item {
-    float:left;
-    position: relative;
-    min-height: 140px;
+  float: left;
+  position: relative;
+  min-height: 140px;
 }
 
 .face-rectangle {
-    position: absolute;
-    border-style: solid;
-    border-width: 3px;
-    color: #008272;
+  position: absolute;
+  border-style: solid;
+  border-width: 3px;
+  color: #008272;
 }
 
 .face-landmark {
-    position: absolute;
-    border-style: solid;
-    border-width: 2px;
-    color: #008272;
+  position: absolute;
+  border-style: solid;
+  border-width: 2px;
+  color: #008272;
 }
 
 .demo-codes {
-    word-wrap: break-word;
-    background-color: #f5f5f5;
-    color: #2a2a2a;
-    border: solid 1px #939393;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  color: #2a2a2a;
+  border: solid 1px #939393;
 }
 
 .code {
-    border: none;
-    background-color: #f5f5f5;
+  border: none;
+  background-color: #f5f5f5;
 }
 
 .detection-demo-codes {
-    height: 420px;
-    overflow: auto;
-    position: relative;
+  height: 420px;
+  overflow: auto;
+  position: relative;
 }
 
-.input-group .input-group-btn input[type=file] {
-    display: none;
+.input-group .input-group-btn input[type='file'] {
+  display: none;
 }
 
 .filmstrip {
-    position:relative;
-    height: 200px;
-    overflow: hidden;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
 }
 
 .filmstrip img {
-    /*position: absolute;*/
-    top: 0;
-    left: 0;
-    height: 100%;
-    opacity: 0.5;
-    /*margin: 10px;*/
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  /*position: absolute;*/
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0.5;
+  /*margin: 10px;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .filmstrip img:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .filmstrip img.selected {
-    opacity: 1;
+  opacity: 1;
 }
 
 .image-pair {
-    opacity: .5;
+  opacity: 0.5;
 }
 
 .image-pair.selected {
-    opacity: 1;
+  opacity: 1;
 }
 
 .image-pair:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .glyphicon.spinning {
-    animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
 }
 
 @keyframes spin {
-    from { transform: scale(1) rotate(0deg); }
-    to { transform: scale(1) rotate(360deg); }
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
 }
 
 .display-middle {
-    height: 90%; 
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-banner-container {
-    min-height: 415px;
-    background-color: #004b50;
-    background-position: center top;
-    flex-direction: column;
-    height: 415px;
-    background-position: center top;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: -20px;
-    position: relative;
+  min-height: 415px;
+  background-color: #004b50;
+  background-position: center top;
+  flex-direction: column;
+  height: 415px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  position: relative;
 }
 
 .hero-banner__content-container {
-    padding-left: 0px;
-    padding-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .text--lg {
-    font-size: 46px;
-    line-height: 56px;
+  font-size: 46px;
+  line-height: 56px;
 }
 
 .text--light {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 .text--white {
-    color: #fff;
+  color: #fff;
 }
