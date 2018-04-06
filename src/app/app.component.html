@@ -1,0 +1,31 @@
+<header>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="app-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a [routerLink]="['/demo/emotion-recognition']">Emotion</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/face-detection']">Face Detection</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/face-verification']">Face Verification</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/analyze-image']">Image Analysis</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/read-text']">Text Recognition</a>
+          </li>
+          <li>
+            <a [routerLink]="['/demo/analyze-text']">Text Analysis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

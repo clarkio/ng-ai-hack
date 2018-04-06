@@ -1,0 +1,25 @@
+h2 {
+    text-align: center;
+}
+.input-section {
+    height: 240px;
+}
+.output-section {
+    height: 240px;
+}
+.input-section textarea {
+    height:200px;
+    width:100%;
+}
+.code {
+    background-color: antiquewhite;
+}
+.fa-smile-o, .fa-frown-o {
+    color:darkslategrey;
+}
+table {
+    background-color:white;
+}
+.result-label {
+    width:50px;
+}

@@ -1,0 +1,30 @@
+<div class="col-xs-12 col-sm-6" (window:resize)="onResize($event)">
+    <div class="img_container">
+        <img [src]="selectedImageUrl" alt="Selected Image" class="selected-image" (load)="selectedImageLoaded($event)" />
+        <div *ngFor="let faceRectangle of faceRectangles" [style.top]="faceRectangle.percentTop + '%'" [style.left]="faceRectangle.percentLeft +'%'"
+            [style.width]="faceRectangle.percentWidth + '%'" [style.height]="faceRectangle.percentHeight + '%'" class="face-rectangle">
+        </div>
+        <div *ngFor="let faceLandmark of faceLandmarks" title="{{ faceLandmark.name }}" style.top="{{ faceLandmark.style.percentTop }}%"
+            style.left="{{ faceLandmark.style.percentLeft }}%" class="face-landmark" [ngClass]="isFaceLandmarksEnabled ? '' : 'hidden'"></div>
+    </div>
+    <div class="input-group">
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="button" title="Toggle Face Landmarks" (click)="toggleFaceLandmarks()">
+                <span class="glyphicon" [ngClass]="isFaceLandmarksEnabled ? 'glyphicon-eye-open' : 'glyphicon-eye-close'" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <input type="text" class="form-control" data-defaultValue="Image URL" [(ngModel)]="internetImageUrl" />
+
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="button" (click)="onInternetUrlSelected()">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+            </button>
+            <label class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-folder-open"></span>
+                <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif"
+                       style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px" />
+            </label>
+        </div>
+    </div>
+</div>

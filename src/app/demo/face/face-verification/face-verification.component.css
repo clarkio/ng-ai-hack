@@ -1,0 +1,19 @@
+.component-container {
+    background-color: #fafafa;
+    padding-top:35px;
+    padding-bottom:50px;
+}
+h2 {
+    text-align: center;
+}
+.result-row {
+    margin-top: 20px;
+}
+.result-row img {
+    padding: 0;
+}
+.verification-box {
+    border: 1px solid black;
+    height: 95px;
+    padding: 5px;
+}

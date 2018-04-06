@@ -1,0 +1,30 @@
+<app-hero-banner [apiTitle]='apiTitle' [apiDescription]='apiDescription'>
+</app-hero-banner>
+<div class="container">
+    <div class="col-xs-12">
+        <div class="row">
+            <h2>Face Detection</h2>
+        </div>
+        <div class="row api-description">
+            Detecting faces in images is the first step to a number of exciting facial recognition and emotion-prediction tasks. For example, enabling a 1-1 in-store experience for loyal customers, powering apps that utilize a mobile camera, or improving log-in security for known customers.
+            <br><br>The Face Detection API enables you to detect one or more faces in an image, along with selected attributes such as predicted age, gender, and the presence of other facial features. 27 landmark positions are also recorded for each face identified.
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+        <div class="row">
+            <app-face-viewer (faceDetected)="onFaceDetected('1', $event)" (faceError)="onError($event)"></app-face-viewer>
+            <div class="col-xs-12 col-sm-6">
+                <div class="demo-codes detection-demo-codes">
+                    <h1 class="text-info display-middle" *ngIf="isLoading"><i class="glyphicon glyphicon-refresh spinning"></i></h1>
+                    <div *ngIf="!isLoading">
+                        <pre class="code">Number of faces: {{ faces ? faces.length : 0 }}&#10;{{ faces | json }}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row filmstrip-row">
+            <div *ngFor="let imagePath of imageList" class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filmstrip">
+                <img [src]="imagePath" (click)="selectImage(imagePath)" [ngClass]="imagePath === selectedImagePath ? 'selected' : ''" />
+            </div>
+        </div>
+    </div>
+</div>

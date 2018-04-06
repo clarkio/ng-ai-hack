@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Project specific files and folders
+environment.ts
+
 # Runtime data
 pids
 *.pid

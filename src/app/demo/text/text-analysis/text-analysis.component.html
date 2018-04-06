@@ -1,0 +1,77 @@
+<app-hero-banner [apiTitle]='apiTitle' [apiDescription]='apiDescription'>
+</app-hero-banner>
+<div class="container">
+    <div class="col-lg-12">
+        <div class="row">
+            <h2>Sentiment Analysis</h2>
+        </div>
+        <div class="row api-description">
+            Sentiment analysis is a method to understand the mood and connotations associated text, especially with user-generated content. In the marketing context, there are many applications such as understanding user reviews, or understanding user sentiment related to specific products or brands in general.<br><br>The Sentiment Analysis API will take a string of text as input, and return a numeric score on a scale of 0 to 1. The score is calculated based on n-grams, features from part-of-speech tagging, and word embeddings.
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-section">
+                    <textarea [(ngModel)]="textToAnalyze"></textArea>
+                    <button class="btn btn-wide btn-info pull-right" (click)="analyzeText()">Analyze</button>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="demo-codes detection-demo-codes output-section">
+                    <h1 class="text-info display-middle" *ngIf="isLoading"><i class="glyphicon glyphicon-refresh spinning"></i></h1>
+                    <div *ngIf="!isLoading">
+                        <div class="btn-group btn-group-justified" role="group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-info" [ngClass]="{'active': !showJSON }" (click)="toggleJSON(false)">Results</button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-info" [ngClass]="{'active': showJSON }" (click)="toggleJSON(true)">JSON</button>
+                            </div>
+                        </div>
+                        <pre class="code" [hidden]="!showJSON">Sentiment: 
+                            {{ sentiment | json }} 
+                            
+                            Language: 
+                            {{ languageDetect | json }}
+                            
+                            Key Phrases:
+                            {{ languageKeyPhrases | json }}
+                            </pre>
+                        
+                        <table class="table table-bordered" [hidden]="showJSON">
+                            <tr>
+                                <td class="result-label">Sentiment:</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-info" role="progressbar"
+                                                [style.width]="score()">{{score()}}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="result-label">Language:</td>
+                                <td>
+                                    {{detectedLanguage}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="result-label">Key Phrases:</td>
+                                <td>
+                                  {{keyPhrases}}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div>
+            <button class="btn btn-wide btn-info" (click)="insertEnglishPositiveText()">Sample English (Positive)</button>
+            <button class="btn btn-wide btn-info" (click)="insertEnglishNegativeText()">Sample English (Negative)</button>
+            <button class="btn btn-wide btn-info" (click)="insertSpanishPositiveText()">Sample Spanish (Positive)</button>
+            <button class="btn btn-wide btn-info" (click)="insertSpanishNegativeText()">Sample Spanish (Negative)</button>
+        </div>
+    </div>
+</div>
