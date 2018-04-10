@@ -15,26 +15,21 @@ import { FaceVerificationComponent } from './face/face-verification/face-verific
 import { ComputerVisionReadTextComponent } from './computer-vision/computer-vision-read-text/computer-vision-read-text.component';
 import { ComputerVisionAnalyzeImageComponent } from './computer-vision/computer-vision-analyze-image/computer-vision-analyze-image.component';
 import { TextAnalysisComponent } from './text/text-analysis/text-analysis.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        CognitiveServicesModule,
-        DemoRoutingModule
-    ],
-    declarations: [
-        EmotionRecognitionComponent,
-        FaceViewerComponent,
-        FaceDetectionComponent,
-        FaceVerificationComponent,
-        HeroBannerComponent,
-        ComputerVisionReadTextComponent,
-        ComputerVisionAnalyzeImageComponent,
-        TextAnalysisComponent
-    ],
-    providers: [
-        Title
-    ]
+  imports: [CommonModule, FormsModule, CognitiveServicesModule, DemoRoutingModule],
+  declarations: [
+    EmotionRecognitionComponent,
+    FaceViewerComponent,
+    FaceDetectionComponent,
+    FaceVerificationComponent,
+    HeroBannerComponent,
+    ComputerVisionReadTextComponent,
+    ComputerVisionAnalyzeImageComponent,
+    TextAnalysisComponent,
+    HomeComponent
+  ],
+  providers: [Title]
 })
-export class DemoModule { }
+export class DemoModule {}
