@@ -6,25 +6,21 @@
             <h2>Analyze an Image</h2>
         </div>
         <div class="row api-description bottom-padding">
-            Computer vision enables a number of capabilities like understanding the features of user-posted images, identifying people and traits in online content, filtering out inappropriate content, and many more. The Computer Vision API takes an input image and returns information about the content such as a brief description, relevant tags, identified faces, and an adult content flag, among other features.
+            Computer vision enables a number of capabilities like understanding the features of user-posted images, identifying people
+            and traits in online content, filtering out inappropriate content, and many more. The Computer Vision API takes
+            an input image and returns information about the content such as a brief description, relevant tags, identified
+            faces, and an adult content flag, among other features.
         </div>
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <div class="img_container">
                     <img [src]="selectedImageUrl" alt="Selected Image" class="selected-image" (load)="selectedImageLoaded($event)" />
-                    <div *ngFor="let faceRectangle of faceRectangles"
-                        [style.top]="faceRectangle.percentTop + '%'"
-                        [style.left]="faceRectangle.percentLeft +'%'"
-                        [style.width]="faceRectangle.percentWidth + '%'"
-                        [style.height]="faceRectangle.percentHeight + '%'"
-                        class="face-rectangle">
+                    <div *ngFor="let faceRectangle of faceRectangles" [style.top]="faceRectangle.percentTop + '%'" [style.left]="faceRectangle.percentLeft +'%'"
+                        [style.width]="faceRectangle.percentWidth + '%'" [style.height]="faceRectangle.percentHeight + '%'" class="face-rectangle">
                     </div>
-                    <div *ngFor="let faceRectangle of faceRectangles; let i = index"
-                        class="face-rectangle image-features"
-                            [style.top]="(faceRectangle.percentTop + faceRectangle.percentHeight) + '%'" 
-                            [style.left]="faceRectangle.percentLeft +'%'"
-                            [style.min-width]="faceRectangle.percentWidth + '%'">
+                    <div *ngFor="let faceRectangle of faceRectangles; let i = index" class="face-rectangle image-features" [style.top]="(faceRectangle.percentTop + faceRectangle.percentHeight) + '%'"
+                        [style.left]="faceRectangle.percentLeft +'%'" [style.min-width]="faceRectangle.percentWidth + '%'">
                         <span *ngIf="imageFeatures.faces && imageFeatures.faces[i]">{{imageFeatures.faces[i].gender}}, age:{{imageFeatures.faces[i].age}}</span>
                     </div>
                 </div>
@@ -36,16 +32,18 @@
                             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                         </button>
                         <label class="btn btn-default" type="button">
-                          <span class="glyphicon glyphicon-folder-open"></span>
-                          <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif"
-                                 style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px" />
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                            <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif" style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px"
+                            />
                         </label>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <div class="demo-codes detection-demo-codes result-section">
-                    <h1 class="text-info display-middle" *ngIf="isLoading"><i class="glyphicon glyphicon-refresh spinning"></i></h1>
+                    <h1 class="text-info display-middle" *ngIf="isLoading">
+                        <i class="glyphicon glyphicon-refresh spinning"></i>
+                    </h1>
                     <div *ngIf="!isLoading">
                         <div class="btn-group btn-group-justified" role="group">
                             <div class="btn-group" role="group">
@@ -76,13 +74,13 @@
                             <tr *ngIf="imageFeatures && imageFeatures.color">
                                 <td class="result-label">Dominant foreground:</td>
                                 <td>
-                                    <div [style.background-color]="imageFeatures.color.dominantColorForeground"  class="result-color-box"></div>
+                                    <div [style.background-color]="imageFeatures.color.dominantColorForeground" class="result-color-box"></div>
                                 </td>
                             </tr>
                             <tr *ngIf="imageFeatures && imageFeatures.color">
                                 <td class="result-label">Accent:</td>
                                 <td>
-                                    <div [style.background-color]="'#'+imageFeatures.color.accentColor"  class="result-color-box"></div>
+                                    <div [style.background-color]="'#'+imageFeatures.color.accentColor" class="result-color-box"></div>
                                 </td>
                             </tr>
                             <tr *ngIf="imageFeatures && imageFeatures.tags">
@@ -104,9 +102,20 @@
         </div>
         <div class="row filmstrip-row bottom-padding">
             <div *ngFor="let imagePath of imageList" class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filmstrip">
-                <img [src]="imagePath" (click)="selectStockImage(imagePath)" [ngClass]="imagePath === internetImageUrl ? 'selected' : ''" />
+                <img [src]="imagePath" (click)="selectStockImage(imagePath)" [ngClass]="imagePath === internetImageUrl ? 'selected' : ''"
+                />
             </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <h2>Want to build this?</h2>
+        </div>
+        <div class="row row-size2">
+            <h2>
+                <a class="button button-secondary button-primary" href="https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts/javascript#AnalyzeImage">
+                    Documentation</a>
+            </h2>
         </div>
     </div>
 </div>
-

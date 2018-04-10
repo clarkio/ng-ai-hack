@@ -6,7 +6,8 @@
             <h2>Face Verification</h2>
         </div>
         <div class="row api-description">
-            Check the likelihood that two faces belong to the same person. The API will return a confidence score about how likely it is that the two faces belong to one person.
+            Check the likelihood that two faces belong to the same person. The API will return a confidence score about how likely it
+            is that the two faces belong to one person.
         </div>
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
         <div class="row">
@@ -31,6 +32,16 @@
                     <img [src]="imagePair.image2" class="col-xs-6" />
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="row">
+            <h2>Want to build this?</h2>
+        </div>
+        <div class="row row-size2">
+            <h2>
+                <a class="button button-secondary button-primary" href="https://docs.microsoft.com/en-us/azure/cognitive-services/face/quickstarts/javascript#Identify">
+                    Documentation</a>
+            </h2>
         </div>
     </div>
 </div>

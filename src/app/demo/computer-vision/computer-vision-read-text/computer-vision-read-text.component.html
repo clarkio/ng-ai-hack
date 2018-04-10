@@ -1,56 +1,71 @@
 <app-hero-banner [apiTitle]='apiTitle' [apiDescription]='apiDescription'>
 </app-hero-banner>
 <div class="container">
-  <div class="col-xs-12">
-      <div class="row top-padding">
-          <h2>Read Text in Images</h2>
-      </div>
-      <div class="row api-description bottom-padding">
-          Optical Character Recognition (OCR) detects text in an image and extracts the recognized words into a machine-readable character stream. Analyze images to detect embedded text, generate character streams and enable searching. Allow users to take photos of text instead of copying to save time and effort.
-      </div>
-      <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
-      <div class="row">
-          <div class="col-xs-12 col-sm-6">
-              <div class="img_container">
-                  <img [src]="selectedImageUrl" alt="Selected Image" class="selected-image" />
-              </div>
-              <div class="input-group">
-                  <input type="text" class="form-control" data-defaultValue="Image URL" [(ngModel)]="internetImageUrl" />
+    <div class="col-xs-12">
+        <div class="row top-padding">
+            <h2>Read Text in Images</h2>
+        </div>
+        <div class="row api-description bottom-padding">
+            Optical Character Recognition (OCR) detects text in an image and extracts the recognized words into a machine-readable character
+            stream. Analyze images to detect embedded text, generate character streams and enable searching. Allow users
+            to take photos of text instead of copying to save time and effort.
+        </div>
+        <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="img_container">
+                    <img [src]="selectedImageUrl" alt="Selected Image" class="selected-image" />
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" data-defaultValue="Image URL" [(ngModel)]="internetImageUrl" />
 
-                  <div class="input-group-btn">
-                      <button class="btn btn-default" type="button" (click)="onInternetUrlSelected()">
-                          <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-                      </button>
-                      <label class="btn btn-default" type="button">
-                          <span class="glyphicon glyphicon-folder-open"></span>
-                          <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif"
-                                 style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px" />
-                      </label>
-                  </div>
-              </div>
-          </div>
-          <div class="col-xs-12 col-sm-6">
-              <div class="demo-codes detection-demo-codes">
-                  <h1 class="text-info display-middle" *ngIf="isLoading"><i class="glyphicon glyphicon-refresh spinning"></i></h1>
-                  <div *ngIf="!isLoading">
-                      <div class="btn-group btn-group-justified" role="group">
-                          <div class="btn-group" role="group">
-                              <button class="btn btn-info" [ngClass]="{'active': !showJSON }" (click)="toggleJSON(false)">Results</button>
-                          </div>
-                          <div class="btn-group" role="group">
-                              <button class="btn btn-info" [ngClass]="{'active': showJSON }" (click)="toggleJSON(true)">JSON</button>
-                          </div>
-                      </div>
-                      <pre class="code" [hidden]="!showJSON">{{ ocrResult | json }}</pre>
-                      <pre class="code" [hidden]="showJSON">{{ textResult }}</pre>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row filmstrip-row">
-          <div *ngFor="let imagePath of imageList" class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filmstrip">
-              <img [src]="imagePath" (click)="selectStockImage(imagePath)" [ngClass]="imagePath === internetImageUrl ? 'selected' : ''" />
-          </div>
-      </div>
-  </div>
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="button" (click)="onInternetUrlSelected()">
+                            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                        </button>
+                        <label class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                            <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif" style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px"
+                            />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="demo-codes detection-demo-codes">
+                    <h1 class="text-info display-middle" *ngIf="isLoading">
+                        <i class="glyphicon glyphicon-refresh spinning"></i>
+                    </h1>
+                    <div *ngIf="!isLoading">
+                        <div class="btn-group btn-group-justified" role="group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-info" [ngClass]="{'active': !showJSON }" (click)="toggleJSON(false)">Results</button>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-info" [ngClass]="{'active': showJSON }" (click)="toggleJSON(true)">JSON</button>
+                            </div>
+                        </div>
+                        <pre class="code" [hidden]="!showJSON">{{ ocrResult | json }}</pre>
+                        <pre class="code" [hidden]="showJSON">{{ textResult }}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row filmstrip-row">
+            <div *ngFor="let imagePath of imageList" class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filmstrip">
+                <img [src]="imagePath" (click)="selectStockImage(imagePath)" [ngClass]="imagePath === internetImageUrl ? 'selected' : ''"
+                />
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <h2>Want to build this?</h2>
+        </div>
+        <div class="row row-size2">
+            <h2>
+                <a class="button button-secondary button-primary" href="https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/quickstarts/javascript#OCR">
+                    Documentation</a>
+            </h2>
+        </div>
+    </div>
 </div>

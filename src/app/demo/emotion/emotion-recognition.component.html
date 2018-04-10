@@ -6,27 +6,24 @@
             <h2>Recognize Emotions in Images</h2>
         </div>
         <div class="row api-description">
-            Emotion Detection is part of the Face Detection API and provides an analysis of the predicted emotions expressed in each face within the frame. The emotions currently enabled are: happiness, surprise, neutral, anger, contempt, disgust, fear, and sadness.
-            <br><br>To try out the Emotion Detection API, please click the image samples below to generate example results.
+            Emotion Detection is part of the Face Detection API and provides an analysis of the predicted emotions expressed in each
+            face within the frame. The emotions currently enabled are: happiness, surprise, neutral, anger, contempt, disgust,
+            fear, and sadness.
+            <br>
+            <br>To try out the Emotion Detection API, please click the image samples below to generate example results.
         </div>
         <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
         <div class="row">
             <div class="col-xs-12 col-sm-6">
                 <div class="img_container">
                     <img [src]="selectedImageUrl" alt="Selected Image" class="selected-image" (load)="selectedImageLoaded($event)" />
-                    <div *ngFor="let faceRectangle of faceRectangles; let i = index" 
-                            [style.top]="faceRectangle.percentTop + '%'" 
-                            [style.left]="faceRectangle.percentLeft +'%'"
-                            [style.width]="faceRectangle.percentWidth + '%'" 
-                            [style.height]="faceRectangle.percentHeight + '%'"
-                            [style.color]="emotionColor(topEmotion(i),true)"
-                            class="face-rectangle">
+                    <div *ngFor="let faceRectangle of faceRectangles; let i = index" [style.top]="faceRectangle.percentTop + '%'" [style.left]="faceRectangle.percentLeft +'%'"
+                        [style.width]="faceRectangle.percentWidth + '%'" [style.height]="faceRectangle.percentHeight + '%'" [style.color]="emotionColor(topEmotion(i),true)"
+                        class="face-rectangle">
                     </div>
-                    <div class="top-emotion" *ngFor="let faceRectangle of faceRectangles; let i = index" 
-                            [style.background-color]="emotionColor(topEmotion(i),false)" 
-                            [style.top]="(faceRectangle.percentTop + faceRectangle.percentHeight) + '%'" 
-                            [style.left]="faceRectangle.percentLeft +'%'"
-                            [style.min-width]="faceRectangle.percentWidth + '%'">
+                    <div class="top-emotion" *ngFor="let faceRectangle of faceRectangles; let i = index" [style.background-color]="emotionColor(topEmotion(i),false)"
+                        [style.top]="(faceRectangle.percentTop + faceRectangle.percentHeight) + '%'" [style.left]="faceRectangle.percentLeft +'%'"
+                        [style.min-width]="faceRectangle.percentWidth + '%'">
                         <span>{{topEmotion(i)}}</span>
                     </div>
                 </div>
@@ -39,15 +36,17 @@
                         </button>
                         <label class="btn btn-default" type="button">
                             <span class="glyphicon glyphicon-folder-open"></span>
-                            <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif"
-                                   style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px" />
+                            <input type="file" (change)="onFilesSelected($event)" accept="image/bmp,image/jpeg,image/png,image/gif" style="font-size: 50px;width: 120px;opacity: 0;filter:alpha(opacity=0);position: relative;top: -40px;left: -20px"
+                            />
                         </label>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <div class="demo-codes detection-demo-codes">
-                    <h1 class="text-info display-middle" *ngIf="isLoading"><i class="glyphicon glyphicon-refresh spinning"></i></h1>
+                    <h1 class="text-info display-middle" *ngIf="isLoading">
+                        <i class="glyphicon glyphicon-refresh spinning"></i>
+                    </h1>
                     <div *ngIf="!isLoading">
                         <pre class="code">Number of faces: {{ emotions ? emotions.length : 0 }}&#10;{{ emotions | json }}</pre>
                     </div>
@@ -56,8 +55,19 @@
         </div>
         <div class="row filmstrip-row">
             <div *ngFor="let imagePath of imageList" class="col-xs-6 col-sm-4 col-md-3 col-lg-2 filmstrip">
-                <img (click)="selectStockImage(imagePath)" [src]="imagePath" [ngClass]="imagePath === internetImageUrl ? 'selected' : ''" />
+                <img (click)="selectStockImage(imagePath)" [src]="imagePath" [ngClass]="imagePath === internetImageUrl ? 'selected' : ''"
+                />
             </div>
+        </div>
+        <br>
+        <div class="row">
+            <h2>Want to build this?</h2>
+        </div>
+        <div class="row row-size2">
+            <h2>
+                <a class="button button-secondary button-primary" href="https://docs.microsoft.com/en-us/azure/cognitive-services/emotion/quickstarts/javascript">
+                    Documentation</a>
+            </h2>
         </div>
     </div>
 </div>
