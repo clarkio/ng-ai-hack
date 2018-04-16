@@ -1,7 +1,7 @@
 # ng-ai-hack
 
-A starter project for building apps with Angular and Azure Cognitive Services (Artificial Intelligence and Machine Learning products)
-Built by [Laurie Atkinson](https://twitter.com/JoyfulCoder) and [Brian Clark](https://clarkio.com)
+A starter project for building apps with Angular and Azure Cognitive Services (Artificial Intelligence and Machine Learning products).
+Built by [Laurie Atkinson](https://twitter.com/JoyfulCoder) and [Brian Clark](https://twitter.com/_clarkio)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
@@ -17,6 +17,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 8.  Run `npm i -g @angular/cli`
 9.  Run `ng serve`
 10. Navigate to [http://localhost:4200](http://localhost:4200)
+
+## References
+
+* [Azure Cognitive Services Documentation](https://aka.ms/Oo75in)
+* [Emotion Demo on Stackblitz](https://aka.ms/ng-ai-demo)
+* [This Repo :)](https://aka.ms/ng-ai-repo)
 
 ## Development server
 
