@@ -14,8 +14,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5.  Rename the `environment.example.ts` file to `environment.ts`
 6.  Go back to your terminal/command prompt and change to the directory of where you cloned this project. Example `cd ng-ai-hack`
 7.  Run `npm i`
-8.  Run `ng serve`
-9.  Navigate to [http://localhost:4200](http://localhost:4200)
+8.  Run `npm i -g @angular/cli`
+9.  Run `ng serve`
+10. Navigate to [http://localhost:4200](http://localhost:4200)
 
 ## Development server
 
