@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1.  Open your favorite terminal/command prompt and run `git clone git@github.com:clarkio/ng-ai-hack.git`
 2.  Register for the Azure Cognitive Services you plan to use
 3.  Retrieve the API key provided for each service
-4.  Update the `environment.example.ts` file by adding your key values in the `subscriptionKeys` array
+4.  Update the `environment.example.ts` file by adding your key values in the `apiKeys` array
 5.  Rename the `environment.example.ts` file to `environment.ts`
 6.  Go back to your terminal/command prompt and change to the directory of where you cloned this project. Example `cd ng-ai-hack`
 7.  Run `npm i`
