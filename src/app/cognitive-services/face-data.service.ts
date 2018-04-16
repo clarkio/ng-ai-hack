@@ -8,7 +8,7 @@ import { IFace, IFaceVerification } from './models/face.models';
 @Injectable()
 export class FaceDataService extends DataService {
 
-    private key = environment.subscriptionKeys.face;
+    private key = environment.apiKeys.face;
 
     detect(imageUrlOrData: SafeResourceUrl | ArrayBuffer): Promise<IFace[]> {
         const url = `${this.apiServer}/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=true&returnFaceAttributes=age,gender,smile,facialHair,headPose,glasses`;

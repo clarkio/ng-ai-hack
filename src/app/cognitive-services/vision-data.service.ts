@@ -8,7 +8,7 @@ import { IImageFeatures, IOcrResult } from './models/vision.models';
 @Injectable()
 export class VisionDataService extends DataService {
 
-    private key = environment.subscriptionKeys.computerVision;
+    private key = environment.apiKeys.computerVision;
 
     analyze(imageUrlOrData: SafeResourceUrl | ArrayBuffer): Promise<IImageFeatures> {
         const url = `${this.apiServer}/vision/v1.0/analyze?visualFeatures=Categories,Tags,Description,Faces,ImageType,Color,Adult`;

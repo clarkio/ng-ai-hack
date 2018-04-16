@@ -7,7 +7,7 @@ import { ISentiment, ILanguageDetect, ILanguageKeyPhrase } from './models/text.m
 @Injectable()
 export class TextDataService extends DataService {
 
-    private key = environment.subscriptionKeys.textAnalytics;
+    private key = environment.apiKeys.textAnalytics;
 
     analyzeSentiment(text: string): Promise<ISentiment> {
         const url = `${this.apiServer}/text/analytics/v2.0/sentiment`;
