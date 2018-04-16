@@ -1,6 +1,6 @@
 # ng-ai-hack
 A starter project for building apps with Angular and Azure Cognitive Services (Artificial Intelligence and Machine Learning products)
-Built by [Laurie Atkinson]() and [Brian Clark](https://clarkio.com)
+Built by [Laurie Atkinson](https://twitter.com/JoyfulCoder) and [Brian Clark](https://clarkio.com)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
