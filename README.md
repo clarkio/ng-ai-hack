@@ -1,7 +1,7 @@
 # ng-ai-hack
 
-A starter project for building apps with Angular and Azure Cognitive Services (Artificial Intelligence and Machine Learning products)
-Built by [Laurie Atkinson](https://twitter.com/JoyfulCoder) and [Brian Clark](https://clarkio.com)
+A starter project for building apps with Angular and Azure Cognitive Services (Artificial Intelligence and Machine Learning products).
+Built by [Laurie Atkinson](https://twitter.com/JoyfulCoder) and [Brian Clark](https://twitter.com/_clarkio)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
@@ -22,12 +22,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Stackblitz
 
-1. Register for the Azure Cognitive Services you plan to use
-2. Retrieve the API key provided for each service
-3. Go to [this Stackblitz](https://stackblitz.com/github/clarkio/ng-ai-hack)
-4. Click the "Fork" button
-5. Update the `environment.example.ts` file by adding your key values in the `apiKeys` array
-6. Rename the `environment.example.ts` file to `environment.ts`
+1.  Register for the Azure Cognitive Services you plan to use
+2.  Retrieve the API key provided for each service
+3.  Go to [this Stackblitz](https://stackblitz.com/github/clarkio/ng-ai-hack)
+4.  Click the "Fork" button
+5.  Update the `environment.example.ts` file by adding your key values in the `apiKeys` array
+6.  Rename the `environment.example.ts` file to `environment.ts`
+
+## References
+
+* [Azure Cognitive Services Documentation](https://aka.ms/Oo75in)
+* [Emotion Demo on Stackblitz](https://aka.ms/ng-ai-demo)
+* [This Repo :)](https://aka.ms/ng-ai-repo)
+* [Vision Services](https://aka.ms/az-vis-svcs)
+* [Speech Services](https://aka.ms/az-spc-svcs)
+* [Language Services](https://aka.ms/az-lang-svcs)
 
 ## Development server
 
