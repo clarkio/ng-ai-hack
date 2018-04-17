@@ -23,6 +23,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [Azure Cognitive Services Documentation](https://aka.ms/Oo75in)
 * [Emotion Demo on Stackblitz](https://aka.ms/ng-ai-demo)
 * [This Repo :)](https://aka.ms/ng-ai-repo)
+* [Vision Services](https://aka.ms/az-vis-svcs)
+* [Speech Services](https://aka.ms/az-spc-svcs)
+* [Language Services](https://aka.ms/az-lang-svcs)
 
 ## Development server
 
